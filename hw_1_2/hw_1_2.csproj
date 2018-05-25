@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7984DF74-0652-4C4B-AC54-F79287971CA4}</ProjectGuid>
+    <ProjectGuid>{4EA1A9F3-9CDE-4866-89A3-B93F2FD72C53}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>hw_1_1</RootNamespace>
-    <AssemblyName>hw_1_1</AssemblyName>
+    <RootNamespace>hw_1_2</RootNamespace>
+    <AssemblyName>hw_1_2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,9 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountStatus.cs" />
+    <Compile Include="AccountType.cs" />
+    <Compile Include="BankAccount.cs" />
+    <Compile Include="CheckingAccount.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="CumulativeAccount.cs" />
+    <Compile Include="MetalAccount.cs" />
+    <Compile Include="MetalType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleFraction.cs" />
+    <Compile Include="SavingsAccount.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
