@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using hw_1_2;
 
@@ -559,6 +560,26 @@ namespace UnitTest
             Assert.AreEqual(-1, result2);
             Assert.AreEqual(1, result3);
             Assert.AreEqual(1, result4);
+        }
+        [TestMethod]
+        public void NegativeTestCompareTo()
+        {
+            var client1 = new Client("client1");
+
+            client1.OpenSavingsAccount(1000M);
+            client1.OpenCumulativeAccount(1000M);
+            client1.OpenCheckingAccount(1000M);
+            client1.OpenMetalAccount(MetalType.Argentum, 100, 500M);
+
+            var client2 = new List<int>();
+
+            try
+            {
+                var result = client1.CompareTo(client2);
+                Assert.Fail();
+            }
+            catch (InvalidOperationException) { }
+       
         }
     }
 }

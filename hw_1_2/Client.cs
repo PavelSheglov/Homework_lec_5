@@ -242,25 +242,17 @@ namespace hw_1_2
         
         public int CompareTo(object obj)
         {
-            try
-            {
-                if (!(obj is Client))
-                    throw new InvalidOperationException("Объект для сравнения не является Клиентом!!!");
-                if (obj == null)
-                    return 1;
-                var temp = obj as Client;
-                if (this.TotalBalance > temp.TotalBalance)
-                    return 1;
-                else if (this.TotalBalance < temp.TotalBalance)
-                    return -1;
-                else
-                    return 0;
-            }
-            catch(InvalidOperationException ex)
-            {
-                Console.WriteLine(ex.Message);
-                return 1;
-            }
+             if (!(obj is Client))
+                  throw new InvalidOperationException("Объект для сравнения не является Клиентом!!!");
+             if (obj == null)
+                  return 1;
+             var temp = obj as Client;
+             if (this.TotalBalance > temp.TotalBalance)
+                  return 1;
+             else if (this.TotalBalance < temp.TotalBalance)
+                  return -1;
+             else
+                  return 0;
         }
 
         public override string ToString()
